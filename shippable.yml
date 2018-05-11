@@ -1,0 +1,15 @@
+language: none
+
+services:
+   - redis
+
+
+build:
+  pre_ci_boot:
+    image_name: drydock/u14all
+    image_tag: master
+    pull: true
+    
+    
+  ci:
+    - redis-server --version
